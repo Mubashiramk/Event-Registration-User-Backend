@@ -13,6 +13,4 @@ mongoose.connect(process.env.DATABASE_ACCESS, () =>
 app.use(express.json());
 app.use(cors());
 app.use("/app", routesUrls);
-app.listen("http://ec2-3-73-79-235.eu-central-1.compute.amazonaws.com/", () =>
-  console.log("server is running")
-);
+app.listen(4000, () => console.log("server is running"));
