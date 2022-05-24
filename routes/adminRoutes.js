@@ -8,7 +8,6 @@ const deleteUser = require("../controllers/controller");
 const dataRouter = express.Router();
 
 dataRouter.get("/", getAllUsers);
-// dataRouter.delete("/:id", deleteUser);
 dataRouter.delete("/delete-student/:id", (req, res, next) => {
   userData.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
